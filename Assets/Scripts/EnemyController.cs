@@ -51,11 +51,6 @@ public class EnemyController : MonoBehaviour
     }
     protected bool playerOnNavMesh()
     {
-        if (player == null)
-        {
-            return false;
-        }
-
         NavMeshHit hit;
         float maxDistanceToNavMesh = 1.0f;
         bool isOnNavMesh = NavMesh.SamplePosition(player.position, out hit, maxDistanceToNavMesh, NavMesh.AllAreas);
